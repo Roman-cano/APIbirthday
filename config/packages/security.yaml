@@ -22,7 +22,7 @@ security:
 
 
         api:
-            pattern: ^/api
+            pattern: ^/birthday
             stateless: true
             jwt: ~
 
@@ -48,6 +48,8 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/api/login, roles: PUBLIC_ACCESS }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/birthday,       roles: IS_AUTHENTICATED_FULLY }
+
 
 when@test:
     security:
